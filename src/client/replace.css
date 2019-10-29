@@ -1,0 +1,7 @@
+img {
+    visibility: hidden;
+}
+
+*[style^="background-image"] {
+    visibility: hidden;
+}

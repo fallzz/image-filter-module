@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "Chrome Exkittension",
+    "version": "0.1",
+    "web_accessible_resources": [
+        "kittens/kitten1.png",
+        "kittens/kitten2.png",
+        "kittens/kitten3.png",
+        "kittens/kitten4.png",
+        "kittens/kitten5.png"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_end",
+            "all_frames": true,
+            "js": ["kitten.js"],
+            "css": ["replace.css"]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "kittens/kitten1.png",
+        "default_title": "hi"
+    },
+
+    "permissions": [
+        "tabs"
+    ]
+}
